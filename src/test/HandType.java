@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 public enum HandType
 {
+    /**
+     * hauteur
+     */
     HighestCard(hand ->
     {
         return Optional.of(
@@ -15,7 +18,7 @@ public enum HandType
                 .collect(Collectors.toList()));
     }),
     /**
-     *
+     * paire
      */
     Pair(hand ->
     {
