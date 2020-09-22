@@ -47,7 +47,7 @@ public enum HandType
     Straight(hand ->
     {
         var cards = hand.getCards();
-        for (var i = 0; i < 4; i++)
+        for (var i = 0; i < cards.length - 1; i++)
             if (!cards[i].getRank().isConsecutive(cards[i + 1].getRank()))
                 return Optional.empty();
         return Optional.of(List.of(HighestCard.getScoreFunc().apply(hand).orElseThrow().get(0)));
